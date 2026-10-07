@@ -1,0 +1,15 @@
+version: 2
+ 
+sources:
+  - name: raw
+    description: "Datos tal cual llegan del origen (los carga scripts/load_raw_data.py)."
+    schema: raw
+    tables:
+      - name: buildings
+        description: "Un registro por edificio."
+      - name: meters
+        description: "Un registro por contador (electricidad o gas)."
+      - name: meter_readings
+        description: "Lecturas horarias. Pueden tener duplicados, nulos y negativos."
+      - name: tariffs
+        description: "Precio por kWh por tipo de energia y periodo de vigencia."

@@ -1,0 +1,5 @@
+building_type,sector_group,building_type_label
+office,Terciario,Oficinas
+retail,Terciario,Comercial
+residential,Residencial,Residencial
+logistics,Industrial,Logistica

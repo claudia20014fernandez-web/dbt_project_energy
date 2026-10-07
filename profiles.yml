@@ -1,0 +1,8 @@
+energy_analytics:
+  target: dev # dev/prod (esquema personal / esquema de producción)
+  outputs:
+    dev:
+      type: duckdb
+      path: energy.duckdb
+      schema: dev
+      threads: 4

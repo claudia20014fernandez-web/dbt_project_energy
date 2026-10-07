@@ -1,0 +1,31 @@
+name: energy_analytics 
+version: "1.0.0"
+config-version: 2
+ 
+profile: energy_analytics #profile de conexión que usará 
+ 
+# Dónde buscar cada recurso
+model-paths: ["models"] 
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+ 
+clean-targets: ["target", "dbt_packages"]
+ 
+# Define la configuración por carpetas 
+models:
+  energy_analytics:
+    staging:
+      +materialized: view
+      +schema: staging
+    intermediate:
+      +materialized: view
+      +schema: intermediate
+    marts:
+      +materialized: table
+      +schema: marts
+ 
+seeds:
+  energy_analytics:
+    +schema: seeds
