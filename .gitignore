@@ -1,5 +1,5 @@
 # Entorno virtual y artefactos generados
-_venv/
+venv/
 .venv/
 target/
 dbt_packages/
